@@ -95,11 +95,11 @@ lazy_static! {
       map
   };
 
-  static ref TEMPLATE_LITERAL_ESCAPE_MAT: AhoCorasick = AhoCorasick::new(&[
-    b"\\",
-    b"`",
-    b"$",
-  ]);
+}
+
+lazy_static! {
+  static ref TEMPLATE_LITERAL_ESCAPE_MAT: AhoCorasick = AhoCorasick::new(&[b"\\", b"`", b"$",])
+    .expect("Failed to build AhoCorasick instance for TEMPLATE_LITERAL_ESCAPE_MAT");
 }
 
 const TEMPLATE_LITERAL_ESCAPE_REP: &[&[u8]] = &[b"\\\\", b"\\`", b"\\$"];
@@ -385,11 +385,11 @@ fn emit_js_under_operator<'a>(
       write!(out, "{}", value).unwrap();
     }
     Syntax::LiteralStringExpr { value } => {
-      // TODO Possibly not optimal, could use `'` or `"` instead.
+      // Replace stream_replace_all with try_stream_replace_all
       out.extend_from_slice(b"`");
       TEMPLATE_LITERAL_ESCAPE_MAT
-        .stream_replace_all(value.as_bytes(), &mut *out, TEMPLATE_LITERAL_ESCAPE_REP)
-        .unwrap();
+        .try_stream_replace_all(value.as_bytes(), &mut *out, TEMPLATE_LITERAL_ESCAPE_REP)
+        .expect("Failed to perform template literal escape replacement");
       out.extend_from_slice(b"`");
     }
     Syntax::LiteralTemplateExpr { parts } => {

@@ -1,16 +1,16 @@
 [package]
-name = "minify-js-node"
+name = "better-minify-js-node"
 publish = false
 version = "0.6.0"
 description = "Node.js bindings for minify-js"
-authors = ["Wilson Lin <npm@wilsonl.in>"]
+authors = ["Wilson Lin <npm@wilsonl.in>", "Aron Homberg <info@aron-homberg.de>"]
 edition = "2021"
 
 [lib]
 crate-type = ["cdylib"]
 
 [dependencies]
-minify-js = { version = "0.6.0", path = "../rust" }
+better-minify-js = { version = "0.6.0", path = "../rust" }
 
 [dependencies.neon]
 version = "0.10"

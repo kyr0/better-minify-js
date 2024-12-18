@@ -1,19 +1,19 @@
 [package]
-authors = ["Wilson Lin <code@wilsonl.in>"]
+authors = ["Wilson Lin <npm@wilsonl.in>", "Aron Homberg <info@aron-homberg.de>"]
 categories = ["compression", "command-line-utilities", "development-tools::build-utils", "web-programming"]
 description = "Extremely fast JavaScript minifier"
 edition = "2021"
-homepage = "https://github.com/wilsonzlin/minify-js"
+homepage = "https://github.com/kyr0/better-minify-js"
 include = ["/src/**/*", "/Cargo.toml", "/LICENSE", "/README.md"]
 keywords = ["javascript", "compress", "minifier", "js", "ecmascript"]
 license = "Apache-2.0"
-name = "minify-js"
+name = "better-minify-js"
 readme = "README.md"
-repository = "https://github.com/wilsonzlin/minify-js"
+repository = "https://github.com/kyr0/better-minify-js"
 version = "0.6.0"
 
 [dependencies]
-aho-corasick = "0.7"
+aho-corasick = "1.1.3"
 lazy_static = "1.4"
 parse-js = "0.21"
 

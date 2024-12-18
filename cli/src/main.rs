@@ -1,6 +1,6 @@
-use minify_js::minify;
-use minify_js::Session;
-use minify_js::TopLevelMode;
+use better_minify_js::minify;
+use better_minify_js::Session;
+use better_minify_js::TopLevelMode;
 use std::fs::File;
 use std::io::stdin;
 use std::io::stdout;
@@ -9,7 +9,7 @@ use std::io::Write;
 use structopt::StructOpt;
 
 #[derive(StructOpt)]
-#[structopt(name = "minify-js", about = "Extremely fast JS minifier")]
+#[structopt(name = "better-minify-js", about = "Extremely fast JS minifier")]
 // WARNING: Keep descriptions in sync with Cfg.
 struct Cli {
   /// File to minify; omit for stdin.

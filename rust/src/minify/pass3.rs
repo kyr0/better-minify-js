@@ -9,7 +9,6 @@ use parse_js::ast::ObjectMemberType;
 use parse_js::ast::Syntax;
 use parse_js::ast::VarDeclMode;
 use parse_js::ast::VariableDeclarator;
-use parse_js::flag::Flags;
 use parse_js::session::Session;
 use parse_js::session::SessionHashMap;
 use parse_js::source::SourceRange;

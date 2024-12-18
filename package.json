@@ -1,0 +1,22 @@
+{
+  "name": "better-minify-js",
+  "version": "0.6.0",
+  "description": "A better minifier for JavaScript.",
+  "scripts": {
+    "build": "cargo build",
+    "next-version": "node next-version minor",
+    "format": "npx prettier@2.3.2 -w 'next-version' '.github/**/*.yaml' 'nodejs/*.{js,json,ts}'",
+    "format:rust": "cargo +nightly fmt",
+    "test": "RUST_BACKTRACE=1 cargo test"
+  },
+  "authors": [{
+    "email": "npm@wilsonl.in",
+    "name": "Wilson Lin",
+    "url": "https://wilsonl.in/"
+  }, {
+    "name": "Aron Homberg",
+    "url": "https://aron-homberg.de/",
+    "email": "info@aron-homberg.de"
+  }],
+  "license": "MIT"
+}

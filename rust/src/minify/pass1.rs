@@ -6,7 +6,6 @@ use super::ctx::MinifySymbol;
 use parse_js::ast::new_node;
 use parse_js::ast::NodeData;
 use parse_js::ast::Syntax;
-use parse_js::operator::Operator;
 use parse_js::operator::OperatorName;
 use parse_js::session::Session;
 use parse_js::visit::JourneyControls;

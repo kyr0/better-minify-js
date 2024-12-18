@@ -1,4 +1,4 @@
-# minify-js
+# better-minify-js
 
 Extremely fast JavaScript minifier, written in Rust.
 
@@ -8,12 +8,6 @@ Extremely fast JavaScript minifier, written in Rust.
 - Maximises performance on a single CPU core for simple efficient scaling and easy compatible integration.
 - Minification of individual inputs/files only; no bundling or transforming.
 - Prefer minimal complexity and faster performance over maximum configurability and minimal extra compression.
-
-## Performance
-
-Comparison with esbuild, run on [common libraries](./bench).
-
-<img width="400" alt="Chart showing speed of JS minifiers" src="https://static.wilsonl.in/minify-js/bench/0.6.0/total-times.svg"><img width="400" alt="Chart showing compression of JS minifiers" src="https://static.wilsonl.in/minify-js/bench/0.6.0/average-sizes.svg">
 
 ## Features
 
@@ -30,16 +24,10 @@ Comparison with esbuild, run on [common libraries](./bench).
 
 ### CLI
 
-Precompiled binaries are available for Linux, macOS, and Windows.
-
-[Linux x64](https://static.wilsonl.in/minify-js/cli/0.6.0/linux-x86_64/minify-js) |
-[macOS x64](https://static.wilsonl.in/minify-js/cli/0.6.0/macos-x86_64/minify-js) |
-[Windows x64](https://static.wilsonl.in/minify-js/cli/0.6.0/windows-x86_64/minify-js.exe)
-
 Use the `--help` argument for more details.
 
 ```bash
-minify-js --output /path/to/output.min.js /path/to/src.js
+better-minify-js --output /path/to/output.min.js /path/to/src.js
 ```
 
 ### Rust
@@ -48,7 +36,7 @@ Add the dependency:
 
 ```toml
 [dependencies]
-minify-js = "0.6.0"
+better-minify-js = "0.6.0"
 ```
 
 Call the method:
@@ -68,13 +56,13 @@ assert_eq!(out.as_slice(), b"const main=()=>{let a=1}");
 Install the dependency:
 
 ```bash
-npm i @minify-js/node
+npm i better-minify-js-node
 ```
 
 Call the method:
 
 ```typescript
-import {minify} from "@minify-js/node";
+import {minify} from "better-minify-js-node";
 
 const src = Buffer.from("let x = 1;", "utf-8");
 const min = minify(src);

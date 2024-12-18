@@ -8,8 +8,6 @@ use parse_js::source::SourceRange;
 use parse_js::symbol::Identifier;
 use parse_js::symbol::Scope;
 use parse_js::symbol::Symbol;
-use std::cmp::max;
-use std::cmp::min;
 
 // Our additional state that's associated with each Symbol.
 pub struct MinifySymbol<'a> {

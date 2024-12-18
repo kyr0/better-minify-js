@@ -32,7 +32,7 @@ pub fn emit<'a>(node: Node<'a>, output: &mut Vec<u8>) -> () {
 /// # Examples
 ///
 /// ```
-/// use minify_js::{Session, TopLevelMode, minify};
+/// use better_minify_js::{Session, TopLevelMode, minify};
 ///
 /// let mut code: &[u8] = b"const main = () => { let my_first_variable = 1; };";
 /// let session = Session::new();

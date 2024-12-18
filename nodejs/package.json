@@ -1,5 +1,5 @@
 {
-  "name": "@minify-js/node",
+  "name": "better-minify-js-node",
   "description": "Extremely fast JavaScript minifier, written in Rust",
   "main": "index.js",
   "files": [
@@ -13,29 +13,35 @@
   "version": "0.6.0",
   "types": "index.d.ts",
   "scripts": {
-    "build": "cargo-cp-artifact --artifact cdylib minify-js-node index.node -- cargo build --message-format=json-render-diagnostics",
+    "build": "cargo-cp-artifact --artifact cdylib better-minify-js-node index.node -- cargo build --message-format=json-render-diagnostics",
     "build-debug": "npm run build --",
     "build-release": "npm run build -- --release",
-    "clean": "shx rm -rf target index.node",
-    "postinstall": "node postinstall.js"
+    "clean": "shx rm -rf target index.node"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wilsonzlin/minify-js.git"
+    "url": "git+https://github.com/kyr0/better-minify-js.git"
   },
-  "author": {
-    "email": "npm@wilsonl.in",
-    "name": "Wilson Lin",
-    "url": "https://wilsonl.in/"
-  },
+  "authors": [
+    {
+      "email": "npm@wilsonl.in",
+      "name": "Wilson Lin",
+      "url": "https://wilsonl.in/"
+    },
+    {
+      "name": "Aron Homberg",
+      "url": "https://aron-homberg.de/",
+      "email": "info@aron-homberg.de"
+    }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wilsonzlin/minify-js/issues"
+    "url": "https://github.com/kyr0/better-minify-js/issues"
   },
   "engines": {
     "node": ">= 8.6.0"
   },
-  "homepage": "https://github.com/wilsonzlin/minify-js#readme",
+  "homepage": "https://github.com/kyr0/better-minify-js#readme",
   "dependencies": {
     "cargo-cp-artifact": "^0.1"
   },

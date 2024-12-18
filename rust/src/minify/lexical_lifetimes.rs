@@ -1,13 +1,11 @@
 use super::ctx::Ctx;
 use super::ctx::MinifySymbol;
-use core::mem::discriminant;
 use parse_js::ast::NodeData;
 use parse_js::ast::Syntax;
 use parse_js::session::Session;
 use parse_js::session::SessionVec;
 use parse_js::visit::JourneyControls;
 use parse_js::visit::Visitor;
-use std::cmp::Ordering;
 
 #[derive(PartialEq, Eq, PartialOrd, Ord, Clone)]
 pub struct LexicalLifetime<'a>(SessionVec<'a, u32>);
