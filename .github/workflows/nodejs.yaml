@@ -46,15 +46,15 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: 18.x
-
+                      
       - name: Pack and publish package
         working-directory: ./nodejs
+        shell: bash
         run: |
           cat << 'EOF' > .npmrc
           package-lock=false
           //registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}
           EOF
-          # npm refuses to work with symlinks.
           cp ../README.md .
           if [[ "${{ steps.version.outputs.VERSION }}" != "0.0.0" ]]; then
             npm publish --access public
