@@ -1,4 +1,4 @@
-name: Build and upload CLI
+name: Build CLI
 
 on:
   push:
