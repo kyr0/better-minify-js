@@ -29,7 +29,8 @@ Extremely fast JavaScript minifier, written in Rust.
 Use the `--help` argument for more details.
 
 ```bash
-better-minify-js --output /path/to/output.min.js /path/to/src.js
+# mode can be module or global
+better-minify-js-cli --output nodejs/index.min.js nodejs/index.js --mode global
 ```
 
 ### Rust
