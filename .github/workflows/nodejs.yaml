@@ -42,28 +42,11 @@ jobs:
           npm run build-release
           echo ::set-output name=BINARY_NAME::"$(node -e 'console.log([process.platform, process.arch].join("__"))')"
 
-      - name: Upload to B2
-        uses: wilsonzlin/b2-upload-action@v1.0.0
-        with:
-          bucket: ${{ secrets.B2_BUCKET_NAME }}
-          uploadKey: minify-js/nodejs/${{ steps.version.outputs.VERSION }}/${{ steps.module.outputs.BINARY_NAME }}.node
-          keyId: ${{ secrets.B2_KEY_ID }}
-          applicationKey: ${{ secrets.B2_APPLICATION_KEY }}
-          file: ./nodejs/index.node
-
-  package:
-    runs-on: ubuntu-20.04
-    needs: build
-    steps:
-      - uses: actions/checkout@v1
-      - name: Get version
-        id: version
-        shell: bash
-        run: echo ::set-output name=VERSION::"$([[ "$GITHUB_REF" == refs/tags/v* ]] && echo ${GITHUB_REF#refs/tags/v} || echo '0.0.0')"
       - name: Set up Node.js
         uses: actions/setup-node@master
         with:
           node-version: 18.x
+
       - name: Pack and publish package
         working-directory: ./nodejs
         run: |
