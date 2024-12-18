@@ -39,7 +39,7 @@ Add the dependency:
 
 ```toml
 [dependencies]
-better-minify-js = "0.6.0"
+better-minify-js = "0.7.0"
 ```
 
 Call the method:

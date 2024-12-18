@@ -13,11 +13,11 @@ jobs:
       matrix:
         os: [macos-13, ubuntu-22.04, windows-2019]
         include:
-          - os: macos-11.0
+          - os: macos-13.0
             ARCH: macos-x86_64
             MIME: application/octet-stream
             EXT: ""
-          - os: ubuntu-20.04
+          - os: ubuntu-22.04
             ARCH: linux-x86_64
             MIME: application/octet-stream
             EXT: ""
