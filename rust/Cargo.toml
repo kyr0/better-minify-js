@@ -10,7 +10,7 @@ license = "Apache-2.0"
 name = "better-minify-js"
 readme = "README.md"
 repository = "https://github.com/kyr0/better-minify-js"
-version = "0.6.0"
+version = "0.7.0"
 
 [dependencies]
 aho-corasick = "1.1.3"

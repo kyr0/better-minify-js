@@ -1,7 +1,7 @@
 [package]
 name = "better-minify-js-node"
 publish = false
-version = "0.6.0"
+version = "0.7.0"
 description = "Node.js bindings for minify-js"
 authors = ["Wilson Lin <npm@wilsonl.in>", "Aron Homberg <info@aron-homberg.de>"]
 edition = "2021"
@@ -10,7 +10,7 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-better-minify-js = { version = "0.6.0", path = "../rust" }
+better-minify-js = { version = "0.7.0", path = "../rust" }
 
 [dependencies.neon]
 version = "0.10"
