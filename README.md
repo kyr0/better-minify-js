@@ -1,5 +1,7 @@
 # better-minify-js
 
+> Fork of minify-js, which is unmaintained. 
+
 Extremely fast JavaScript minifier, written in Rust.
 
 ## Goals
