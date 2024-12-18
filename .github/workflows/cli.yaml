@@ -43,13 +43,3 @@ jobs:
       - name: Build CLI
         working-directory: ./cli
         run: cargo build --release -vvv
-
-      - name: Upload to B2
-        uses: wilsonzlin/b2-upload-action@v1.0.0
-        with:
-          bucket: ${{ secrets.B2_BUCKET_NAME }}
-          uploadKey: minify-js/cli/${{ steps.version.outputs.VERSION }}/${{ matrix.ARCH }}/minify-js${{ matrix.EXT }}
-          keyId: ${{ secrets.B2_KEY_ID }}
-          applicationKey: ${{ secrets.B2_APPLICATION_KEY }}
-          file: ./target/release/minify-js-cli${{ matrix.EXT }}
-          contentType: ${{ matrix.MIME }}
